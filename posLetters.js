@@ -5,9 +5,14 @@ function count(str) {
 
   for (var i = 0; i < noSpaces.length; i++)  {
     alpha = noSpaces[i];
+    result[alpha] = '';
+  }
+
+  for (var i = 0; i < noSpaces.length; i++)  {
+    alpha = noSpaces[i];
 //console.log(alpha);
 //console.log(result[alpha]);
-    result[alpha] = (result[alpha] || 0) + 1;
+    result[alpha] = (result[alpha]) + ',' + i.toString();
   }
 
 console.log(Object.keys(result));
