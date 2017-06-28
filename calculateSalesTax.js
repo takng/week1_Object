@@ -40,7 +40,6 @@ function sumCompany(salesData) {
         if (!result[name]) {
           result[name] = {
             totalSales: eachSalesValue[j],
-            //totalTax: eachSalesValue[j] * salesTaxRates[province],
             totalTax: eachSalesValue[j] * salesTaxRates[province]
           }
         } else {
