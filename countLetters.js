@@ -3,7 +3,7 @@ function count(str) {
   var result = {};
   var alpha = '';
 
-  for (var i=0; i < noSpaces.length; i++)  {
+  for (var i = 0; i < noSpaces.length; i++)  {
     alpha = noSpaces[i];
 //console.log(alpha);
 //console.log(result[alpha]);
