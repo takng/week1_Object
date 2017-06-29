@@ -22,7 +22,7 @@ var companySalesData = [
   }
 ];
 
-function sumCompany(salesData) {
+function calculateSalesTax(salesData, taxRates) {
   var result = {};
 
   for (var i = 0; i < salesData.length; i++) {
@@ -40,11 +40,11 @@ function sumCompany(salesData) {
         if (!result[name]) {
           result[name] = {
             totalSales: eachSalesValue[j],
-            totalTax: eachSalesValue[j] * salesTaxRates[province]
+            totalTax: eachSalesValue[j] * taxRates[province]
           }
         } else {
           result[name].totalSales += eachSalesValue[j];
-          result[name].totalTax += eachSalesValue[j] * salesTaxRates[province];
+          result[name].totalTax += eachSalesValue[j] * taxRates[province];
         }
     }
 
@@ -52,5 +52,7 @@ function sumCompany(salesData) {
   return result;
 }
 
-console.log(sumCompany(companySalesData));
+var results = calculateSalesTax(companySalesData, salesTaxRates);
+console.log(results);
+
 
