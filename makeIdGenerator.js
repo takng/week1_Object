@@ -5,7 +5,7 @@ function makeIdGenerator() {
   return function() {
     // This inner function accesses and assigns the value of
     // the variable id, which was defined in the parent function
-    id += 1;
+    id++;
     return id;
   }
 }
